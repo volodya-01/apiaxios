@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    var obj = {
+      name: 'Jim'
+    };
+
+    var str = JSON.stringify(obj);
+
+    //存入
+
+    sessionStorage.obj = str;
+console.log(localStorage)
+
+    //读取
+
+    str = sessionStorage.obj;
+
+    //重新转换为对象
+
+    obj = JSON.parse(str);
+
+    var arra = [1, 2, 3, 4];
+
+    localStorage.setItem('key', JSON.stringify(arra));
+
+    var read = JSON.parse(localStorage.getItem('key'));
+
+    console.log(read, read.length);
+  </script>
+</body>
+
+</html>
